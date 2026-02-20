@@ -1,11 +1,318 @@
 <!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>clipsound</title>
-  </head>
-  <body>
-    <h1>It works ✅</h1>
-  </body>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pasquale Mirtuono, PhD — CTO AI & Computer Vision</title>
+  <meta name="description" content="CTO AI & Computer Vision. Deep learning visual inspection for pharma packaging: anomaly detection, code reading, scalable architectures." />
+  <style>
+    :root{
+      --bg:#ffffff; --fg:#0b1220; --muted:#5b6475; --line:#e7ecf4;
+      --card:#ffffff; --shadow:0 12px 30px rgba(15,23,42,.08);
+      --brand:#2563eb; --brand2:#06b6d4;
+      --radius:18px;
+      --max:1080px;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+    }
+    *{box-sizing:border-box}
+    body{margin:0; font-family:var(--sans); color:var(--fg); background:var(--bg)}
+    a{color:inherit; text-decoration:none}
+    .wrap{max-width:var(--max); margin:0 auto; padding:0 20px}
+    .nav{
+      position:sticky; top:0; z-index:50; background:rgba(255,255,255,.85);
+      backdrop-filter:saturate(180%) blur(14px);
+      border-bottom:1px solid var(--line);
+    }
+    .nav-inner{display:flex; align-items:center; justify-content:space-between; height:64px}
+    .logo{display:flex; align-items:center; gap:10px; font-weight:700; letter-spacing:.2px}
+    .dot{width:10px; height:10px; border-radius:999px; background:linear-gradient(135deg,var(--brand),var(--brand2))}
+    .links{display:flex; gap:18px; align-items:center; color:var(--muted); font-size:14px}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:10px;
+      padding:10px 14px; border-radius:999px; border:1px solid var(--line);
+      background:#fff; box-shadow:0 1px 0 rgba(15,23,42,.04);
+      font-weight:600; font-size:14px;
+    }
+    .btn.primary{border-color:rgba(37,99,235,.25); background:linear-gradient(135deg,rgba(37,99,235,.10),rgba(6,182,212,.10))}
+    .hero{padding:54px 0 22px}
+    .grid{display:grid; grid-template-columns:1.3fr .7fr; gap:22px}
+    @media (max-width:900px){ .grid{grid-template-columns:1fr} .links{display:none} }
+    h1{margin:0; font-size:46px; line-height:1.05; letter-spacing:-.8px}
+    .sub{margin-top:14px; color:var(--muted); font-size:16px; line-height:1.55; max-width:58ch}
+    .hero-actions{margin-top:18px; display:flex; gap:10px; flex-wrap:wrap}
+    .trust{margin-top:18px; display:flex; gap:10px; flex-wrap:wrap}
+    .pill{
+      font-family:var(--mono); font-size:12px; color:#0f172a;
+      border:1px solid var(--line); background:#fff; padding:8px 10px; border-radius:999px;
+    }
+    .card{
+      background:var(--card); border:1px solid var(--line); border-radius:var(--radius);
+      box-shadow:var(--shadow);
+    }
+    .side{padding:18px}
+    .kpi{display:grid; gap:10px}
+    .kpi .row{padding:12px; border-radius:14px; border:1px solid var(--line); background:#fbfcff}
+    .kpi .label{font-size:12px; color:var(--muted); font-family:var(--mono)}
+    .kpi .value{margin-top:6px; font-weight:700}
+    section{padding:26px 0}
+    .sec-title{display:flex; align-items:baseline; justify-content:space-between; gap:16px}
+    .sec-title h2{margin:0; font-size:22px; letter-spacing:-.2px}
+    .sec-title p{margin:0; color:var(--muted); font-size:14px}
+    .cards{display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin-top:14px}
+    @media (max-width:900px){ .cards{grid-template-columns:1fr 1fr} }
+    @media (max-width:520px){ .cards{grid-template-columns:1fr} }
+    .mini{padding:16px}
+    .mini .t{font-weight:700; margin:0 0 8px 0}
+    .mini .d{margin:0; color:var(--muted); font-size:14px; line-height:1.5}
+    .timeline{margin-top:14px; display:grid; gap:12px}
+    .item{padding:16px}
+    .meta{display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap}
+    .role{font-weight:800}
+    .when{font-family:var(--mono); color:var(--muted); font-size:12px}
+    ul{margin:10px 0 0 18px; color:var(--muted); line-height:1.55}
+    .pubs{margin-top:12px; display:grid; gap:10px}
+    .pub{padding:14px; border-radius:14px; border:1px solid var(--line); background:#fbfcff}
+    .pub b{display:block}
+    .footer{padding:28px 0 44px; border-top:1px solid var(--line); margin-top:22px}
+    .contact{display:flex; gap:10px; flex-wrap:wrap; align-items:center}
+    .small{color:var(--muted); font-size:13px}
+    .copy{cursor:pointer}
+  </style>
+</head>
+<body>
+  <div class="nav">
+    <div class="wrap nav-inner">
+      <div class="logo">
+        <span class="dot"></span>
+        <span>Pasquale Mirtuono</span>
+      </div>
+      <div class="links">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#teaching">Teaching</a>
+        <a href="#publications">Publications</a>
+        <a href="#contact">Contact</a>
+        <a class="btn primary" href="#contact">Download CV</a>
+      </div>
+      <a class="btn primary" href="#contact">Contact</a>
+    </div>
+  </div>
+
+  <header class="hero">
+    <div class="wrap grid">
+      <div>
+        <h1>CTO — AI & Computer Vision<br/>for pharma visual inspection</h1>
+        <p class="sub">
+          Progetto e porto in produzione sistemi di ispezione visiva basati su deep learning per linee industriali:
+          anomaly detection, code reading e architetture scalabili (Python/C++, PyTorch/TensorFlow).
+        </p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#contact">Contattami</a>
+          <a class="btn" href="#publications">Pubblicazioni</a>
+          <a class="btn" href="https://www.mirtuono.it" target="_blank" rel="noreferrer">mirtuono.it</a>
+        </div>
+        <div class="trust">
+          <span class="pill">CTO @ AIVIZ (2022–)</span>
+          <span class="pill">Adjunct Professor (UniVR, 2023–2024)</span>
+          <span class="pill">PhD — Multimodal Imaging & Biomedicine</span>
+        </div>
+      </div>
+
+      <aside class="card side">
+        <div class="kpi">
+          <div class="row">
+            <div class="label">Focus</div>
+            <div class="value">Primary packaging inspection (capsules/tablets)</div>
+          </div>
+          <div class="row">
+            <div class="label">Capabilities</div>
+            <div class="value">Anomaly detection · Code reading · Line clearance</div>
+          </div>
+          <div class="row">
+            <div class="label">Stack</div>
+            <div class="value">Python/C++ · PyTorch · TensorFlow · OpenCV</div>
+          </div>
+          <div class="row">
+            <div class="label">Location</div>
+            <div class="value">Verona, Italy</div>
+          </div>
+        </div>
+        <p class="small" style="margin:12px 0 0 0;">
+          Suggerimento: aggiungi qui 3–5 metriche (FPS, linee installate, riduzione falsi scarti) per aumentare la conversione.
+        </p>
+      </aside>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section id="about">
+      <div class="sec-title">
+        <h2>What I do</h2>
+        <p>Industrial-grade AI: dalla strategia al deploy in linea.</p>
+      </div>
+      <div class="cards">
+        <div class="card mini">
+          <p class="t">Primary packaging inspection</p>
+          <p class="d">Modelli DL per ispezione e riconoscimento anomalie su solidi farmaceutici in bottle e blister.</p>
+        </div>
+        <div class="card mini">
+          <p class="t">Code reading, end-to-end</p>
+          <p class="d">Integrazione con smart cameras per lettura codici 1D/2D e codici human-visible.</p>
+        </div>
+        <div class="card mini">
+          <p class="t">Line clearance support</p>
+          <p class="d">Sistemi di visione a supporto delle procedure di line clearance in produzione.</p>
+        </div>
+        <div class="card mini">
+          <p class="t">Scalable architectures</p>
+          <p class="d">Architetture e pipeline ad alte prestazioni (Python/C++) per ambienti industriali.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="sec-title">
+        <h2>Experience</h2>
+        <p>Leadership + delivery su sistemi reali.</p>
+      </div>
+
+      <div class="timeline">
+        <div class="card item">
+          <div class="meta">
+            <div class="role">CTO — AIVIZ SRL</div>
+            <div class="when">2022–present</div>
+          </div>
+          <ul>
+            <li>Strategia tecnica e roadmap per piattaforme di visual inspection.</li>
+            <li>Deep learning per ispezione e anomaly recognition in ambiente industriale.</li>
+            <li>Integrazione con smart cameras; supporto line clearance; training team.</li>
+          </ul>
+        </div>
+
+        <div class="card item">
+          <div class="meta">
+            <div class="role">Deep Learning Team Leader — Brevetti CEA</div>
+            <div class="when">2018–2021</div>
+          </div>
+          <ul>
+            <li>Transizione a soluzioni AI in inspection systems (pharma).</li>
+            <li>Supervisione team e validazione di sistemi di ispezione.</li>
+          </ul>
+        </div>
+
+        <div class="card item">
+          <div class="meta">
+            <div class="role">Computer Vision Expert — Brevetti CEA</div>
+            <div class="when">2016–2021</div>
+          </div>
+          <ul>
+            <li>Algoritmi CV per quality control e ottimizzazione pipeline (accuracy/speed).</li>
+          </ul>
+        </div>
+
+        <div class="card item">
+          <div class="meta">
+            <div class="role">Mobile Software Developer — Federico Ferlini SRL</div>
+            <div class="when">2014–2016</div>
+          </div>
+          <ul>
+            <li>Native iOS/Android; architetture client-server; DB (SQL/SQLite); performance e scalabilità.</li>
+          </ul>
+        </div>
+
+        <div class="card item">
+          <div class="meta">
+            <div class="role">Research Fellow — ROBOCAST (EU Project)</div>
+            <div class="when">2010–2012</div>
+          </div>
+          <ul>
+            <li>Trajectory planning e controllo robotico per supporto a chirurgia minimamente invasiva.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="teaching">
+      <div class="sec-title">
+        <h2>Teaching & Research</h2>
+        <p>Accademia e industria, con focus su sistemi robusti.</p>
+      </div>
+      <div class="timeline">
+        <div class="card item">
+          <div class="meta">
+            <div class="role">Adjunct Professor — University of Verona</div>
+            <div class="when">2023–2024</div>
+          </div>
+          <ul>
+            <li>Reinforcement Learning: MDP, model-based/model-free, deep RL, hierarchical RL, meta-learning.</li>
+            <li>Advanced programming for AI: deployment, interoperabilità, explainability.</li>
+          </ul>
+        </div>
+
+        <div class="card item">
+          <div class="meta">
+            <div class="role">PhD — Multimodal Imaging and Biomedicine</div>
+            <div class="when">2014</div>
+          </div>
+          <ul>
+            <li>DTI per applicazioni neurochirurgiche: pianificazione e supporto alla rimozione tumorale in aree eloquenti.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="publications">
+      <div class="sec-title">
+        <h2>Selected publications</h2>
+        <p>Selezione dal mio elenco completo.</p>
+      </div>
+
+      <div class="pubs">
+        <div class="pub"><b>Dissimilarity-based detection of schizophrenia (2011)</b><span class="small">International Journal of Imaging Systems and Technology</span></div>
+        <div class="pub"><b>A new shape diffusion descriptor for brain classification (2011)</b><span class="small">MICCAI</span></div>
+        <div class="pub"><b>Multimodal Schizophrenia Detection by Multiclassification Analysis (2011)</b><span class="small">Iberoamerican Congress on Pattern Recognition</span></div>
+        <div class="pub"><b>Intracranial pressure monitoring versus a non-invasive recording method (2013)</b><span class="small">Journal of Critical Care</span></div>
+        <div class="pub"><b>GLexico-semantic dissociations in patients with brain tumors (2014)</b><span class="small">Society for the Neurobiology of Language</span></div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="sec-title">
+        <h2>Contact</h2>
+        <p>La cosa più semplice da condividere: un link + un messaggio.</p>
+      </div>
+
+      <div class="card item">
+        <div class="contact">
+          <a class="btn primary" href="mailto:pasquale.mirtuono@gmail.com">pasquale.mirtuono@gmail.com</a>
+          <button class="btn copy" id="copyEmail" type="button">Copy email</button>
+          <a class="btn" href="https://www.mirtuono.it" target="_blank" rel="noreferrer">Website</a>
+        </div>
+        <p class="small" style="margin:12px 0 0 0;">
+          Tip “diffusione”: aggiungi un link LinkedIn e 2–3 case study “anonimizzati” (problema → approccio → risultato).
+        </p>
+      </div>
+    </section>
+
+    <div class="footer">
+      <div class="small">© <span id="y"></span> Pasquale Mirtuono · Built for speed on GitHub Pages</div>
+    </div>
+  </main>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+    const btn = document.getElementById("copyEmail");
+    btn.addEventListener("click", async () => {
+      try{
+        await navigator.clipboard.writeText("pasquale.mirtuono@gmail.com");
+        btn.textContent = "Copied ✓";
+        setTimeout(()=>btn.textContent="Copy email", 1200);
+      }catch(e){
+        btn.textContent = "Copy failed";
+        setTimeout(()=>btn.textContent="Copy email", 1200);
+      }
+    });
+  </script>
+</body>
 </html>
