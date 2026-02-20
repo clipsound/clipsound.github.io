@@ -78,6 +78,32 @@
     .contact{display:flex; gap:10px; flex-wrap:wrap; align-items:center}
     .small{color:var(--muted); font-size:13px}
     .copy{cursor:pointer}
+    .avatar{
+      width:120px; height:120px; border-radius:50%;
+      object-fit:cover; border:3px solid var(--line);
+      box-shadow:0 4px 12px rgba(15,23,42,.1);
+      margin:0 auto 20px;
+      display:block;
+    }
+    .tech-icons{display:flex; gap:8px; flex-wrap:wrap; align-items:center; margin-top:8px}
+    .tech-icon{
+      width:24px; height:24px; opacity:.7; transition:opacity .2s;
+      display:inline-block; vertical-align:middle;
+    }
+    .tech-icon:hover{opacity:1}
+    .org-logo{
+      height:20px; width:auto; margin-left:8px; vertical-align:middle; opacity:.8;
+      display:inline-block;
+    }
+    .social-links{display:flex; gap:12px; flex-wrap:wrap; margin-top:12px}
+    .social-link{
+      display:inline-flex; align-items:center; gap:6px;
+      padding:8px 12px; border-radius:8px; border:1px solid var(--line);
+      background:#fff; font-size:14px; color:var(--muted);
+      transition:all .2s;
+    }
+    .social-link:hover{color:var(--fg); border-color:var(--brand); background:#fbfcff}
+    .social-icon{width:18px; height:18px}
   </style>
 </head>
 <body>
@@ -120,6 +146,7 @@
       </div>
 
       <aside class="card side">
+        <img src="Pasquale2025_color.jpg" alt="Pasquale Mirtuono" class="avatar" />
         <div class="kpi">
           <div class="row">
             <div class="label">Focus</div>
@@ -131,7 +158,16 @@
           </div>
           <div class="row">
             <div class="label">Stack</div>
-            <div class="value">Python/C++ · PyTorch · TensorFlow · OpenCV</div>
+            <div class="value">
+              Python/C++ · PyTorch · TensorFlow · OpenCV
+              <div class="tech-icons">
+                <svg class="tech-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" title="Python"><path d="M14.5 0h-5L7 3.5v17L9.5 24h5L17 20.5v-17L14.5 0zm-2.5 2h1.5L15 4.5v15L13.5 22h-1.5l-1.5-2.5v-15L12 2z"/><path d="M12 4.5c-.8 0-1.5.7-1.5 1.5s.7 1.5 1.5 1.5 1.5-.7 1.5-1.5-.7-1.5-1.5-1.5zm0 13.5c-.8 0-1.5.7-1.5 1.5s.7 1.5 1.5 1.5 1.5-.7 1.5-1.5-.7-1.5-1.5-1.5z"/></svg>
+                <svg class="tech-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" title="C++"><path d="M22.395 0h-8.42l2.487 2.487h5.933v5.933L22.395 11.947V0zm-11.947 0H2.03v11.947h8.418V0zm11.947 11.947l-2.487 2.488H13.03v8.418h8.418V11.947zM0 13.03v8.418h8.418V13.03H0z"/></svg>
+                <svg class="tech-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" title="PyTorch"><path d="M12.005 0L4.952 7.053l7.053 7.11h7.11V7.053L12.005 0zM7.053 8.16L0 15.268v7.11h7.11l7.11-7.053v-7.11L7.053 8.16z"/></svg>
+                <svg class="tech-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" title="TensorFlow"><path d="M1.281 10.646l8.727-5.03v3.309l-5.418 3.13v6.2l-3.309 1.9v-9.51zm21.438 0v9.51l-3.309-1.9v-6.2l-5.418-3.13V5.616l8.727 5.03zm-.822 8.727l-5.418-3.13v-6.2l-3.309-1.9v10.51l8.727-5.03v.75zm-15.794-3.13L1.305 16.373v-6.2l5.418-3.13v6.2zm8.727-3.13V8.043l-5.418-3.13v6.2l5.418 3.13zm-5.418 3.13l-5.418 3.13v-6.2l5.418-3.13v6.2zm11.236-3.13l-5.418-3.13v-6.2l5.418 3.13v6.2zM12.897 4.913L7.48 1.783l8.727-5.03v3.309l-3.31 4.851z"/></svg>
+                <svg class="tech-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" title="OpenCV"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 2.4c5.302 0 9.6 4.298 9.6 9.6S17.302 21.6 12 21.6 2.4 17.302 2.4 12 6.698 2.4 12 2.4z"/><circle cx="12" cy="12" r="3"/></svg>
+              </div>
+            </div>
           </div>
           <div class="row">
             <div class="label">Location</div>
@@ -180,7 +216,10 @@
       <div class="timeline">
         <div class="card item">
           <div class="meta">
-            <div class="role">CTO — AIVIZ SRL</div>
+            <div class="role">
+              CTO — AIVIZ SRL
+              <svg class="org-logo" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            </div>
             <div class="when">2022–present</div>
           </div>
           <ul>
@@ -241,7 +280,10 @@
       <div class="timeline">
         <div class="card item">
           <div class="meta">
-            <div class="role">Adjunct Professor — University of Verona</div>
+            <div class="role">
+              Adjunct Professor — University of Verona
+              <svg class="org-logo" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg>
+            </div>
             <div class="when">2023–2024</div>
           </div>
           <ul>
@@ -289,9 +331,20 @@
           <button class="btn copy" id="copyEmail" type="button">Copy email</button>
           <a class="btn" href="https://www.mirtuono.it" target="_blank" rel="noreferrer">Website</a>
         </div>
-        <p class="small" style="margin:12px 0 0 0;">
-          Tip “diffusione”: aggiungi un link LinkedIn e 2–3 case study “anonimizzati” (problema → approccio → risultato).
-        </p>
+        <div class="social-links">
+          <a href="https://github.com/YOUR_USERNAME" target="_blank" rel="noreferrer" class="social-link">
+            <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            GitHub
+          </a>
+          <a href="https://www.linkedin.com/in/YOUR_PROFILE" target="_blank" rel="noreferrer" class="social-link">
+            <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            LinkedIn
+          </a>
+          <a href="https://www.univr.it/it/persone/pasquale-mirtuono" target="_blank" rel="noreferrer" class="social-link">
+            <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg>
+            University of Verona
+          </a>
+        </div>
       </div>
     </section>
 
